@@ -1,8 +1,8 @@
 toDoApp.factory('ToDoFactory', function() {
 
-  var Todo = function(todoText){
+  var Todo = function(todoText, completed = false){
     this.task = todoText;
-    this.completed = (typeof completed !== 'undefined') ? completed : false;
+    this.completed = completed;
   };
 
   Todo.prototype.complete = function() {
